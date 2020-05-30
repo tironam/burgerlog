@@ -1,0 +1,17 @@
+<h1>Log your Burgers!</h1>
+
+<form>
+    <p>
+        <label for="title">Burger</label>
+        <input type="text" name="burgerInput" id="burgerInput">
+    </p> 
+    <button id="addBurger">Add a Burger</button>
+</form>
+
+<ul id="burgers">
+    {{#each burgers}}
+    <li>
+        {{this.burgerInput}}
+        <button class="devour">Devour</button>
+    </li>
+</ul>
