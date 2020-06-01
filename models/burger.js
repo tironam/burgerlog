@@ -8,6 +8,6 @@ module.exports = {
         orm.createOne('burgers', burger, info => cb(info))
     },
     updateBurgers (changes, where, cb) {
-        orm.updateOne('burgers', changes, wheren info => cb(info))
+        orm.updateOne('burgers', changes, where, info => cb(info))
     }
 }
