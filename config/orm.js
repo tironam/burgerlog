@@ -14,8 +14,9 @@ module.exports = {
         })
     },
     updateOne (table, changes, where, cb) {
-        db.query(`UPDATE ${table} SET ? WHERE ?`, [changes, where, (err, info) +> {
-            if (err) { console.,log(err) }
+        db.query(`UPDATE ${table} SET ? WHERE ?`, [changes, where], (err, info) => {
+            if (err) { console.log(err) }
             cb(info)
-        }])
+        })
     }
+}
