@@ -3,9 +3,10 @@ const { Burger } = require('../models/burger')
 
 router.get('/', (req, res) => res.redirect('/burgers')) 
 
+
 router.get('/burgers', (req, res) => {
     Burger.getBurgers()
-        .then(burgers => res.json(burgers))
+        .then(burgerData => res.render('index', { burgers: burgerData }))
         .catch(err => console.error(err))
 })
 
