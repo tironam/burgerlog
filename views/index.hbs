@@ -14,15 +14,16 @@
         {{this.burgerInput}}
         <button class="devour">Devour</button>
     </li>
+    {{/each}}
 </ul>
 
 <script>
 
     document.getElementById('addBurger').addEventListener('click', event => {
         event.preventDefault()
-        axios.post('/items', {
+        {{!-- axios.post('/items', {
 
-        })
+        }) --}}
     })
 
 </script>
